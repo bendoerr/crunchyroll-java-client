@@ -1,7 +1,7 @@
 plugins {
     id 'java'
+    id 'maven'
     id 'io.franzbecker.gradle-lombok' version '1.6'
-    id "net.carlosgsouza.console" version "1.1"
 }
 
 group 'me.bendoerr'
@@ -9,10 +9,12 @@ version '0.1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
+    compile 'org.slf4j:slf4j-simple:1.7.21'
     compile 'org.glassfish.jersey.core:jersey-client:2.22.2'
     compile 'org.glassfish.jersey.media:jersey-media-jaxb:2.22.2'
     compile 'org.glassfish.jersey.connectors:jersey-apache-connector:2.22.2'
